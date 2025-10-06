@@ -21,7 +21,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-50 z-10 flex flex-col justify-center items-center text-center text-white px-4">
           <h1 className="text-5xl font-bold mb-4">PORTFOLIO</h1>
           <p className="max-w-2xl text-lg">
-            Our global portfolio of companies includes market leaders across the mid-market software and software-enabled tech services landscape.
+            Our global portfolio of companies includes skf;dfkjnvnionjf  market leaders across the mid-market software and software-enabled tech services landscape.
           </p>
         </div>
       </section>
