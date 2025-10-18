@@ -6,10 +6,10 @@ import Header from "../../Component/Header/Header";
 import {AreaChart, BarChart, Boxes, Calendar, Cog, Edit3, File, FileText,LineChart, Link, Mail, Phone, PieChart, RefreshCw, Settings, Users,Download, TreePine, MessagesSquare, Send, Clock, Bell} from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function Products() {
+export default function Broducts() {
   const { t } = useTranslation();
 
-  const products = [
+  const productss = [
     { icon: <AreaChart size={60} className="text-[#3190E7] mb-6" />, title: t("Electronic") },
     { icon: <BarChart size={60} className="text-[#3190E7] mb-6" />, title: t("Work") },
     { icon: <LineChart size={60} className="text-[#3190E7] mb-6" />, title: t("Abstract") },
@@ -76,7 +76,7 @@ export default function Products() {
         initial="hidden"
         animate="visible"
       >
-        {products.map((product, index) => (
+        {productss.map((product, index) => (
           <motion.div
             key={index}
             variants={cardVariants}

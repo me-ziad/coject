@@ -16,11 +16,11 @@ import Problem from "./Component/SoftwareDevelopment/Proplem/problem";
 import OperationAndMaintenance from "./Component/Solutions/Operationandmaintenance/OperationAndMaintenance";
 import CustomSystems from "./Component/Solutions/CustomSystems/CustomSystems";
 import Research from "./Component/Research/Research";
-import Products from "./Component/products/products";
-import Employment from "./Component/Employment/Employment";
+ import Employment from "./Component/Employment/Employment";
 import SuccessStories from "./Component/SuccessStories/SuccessStories";
 import WhyAkwad from "./Component/WhyAkwad/WhyAkwad";
 import Contact from "./Component/Contact/Contact";
+import Broducts from "./Component/products/Products";
 
 function App() {
   
@@ -41,7 +41,7 @@ function App() {
       {path  :'/OperationAndMaintenance' , element: <OperationAndMaintenance/>},
       {path  :'/CustomSystems' , element: <CustomSystems/>},
       {path  :'/Research' , element: <Research/>},
-      {path  :'/products' , element: <Products/>},
+      {path  :'/products' , element: <Broducts/>},
       {path  :'/Employment' , element: <Employment/>},
       {path  :'/Successstories' , element: <SuccessStories/>},
       {path  :'/WhyAkwad' , element: <WhyAkwad/>},
