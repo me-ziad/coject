@@ -1,45 +1,188 @@
-import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
+import React from "react";
+import "../../index.css";
+import TitleSection from "../../Component/titleSection/TitleSection";
 import { useTranslation } from "react-i18next";
+import Header from "../../Component/Header/Header";
+import { LineChart } from "lucide-react";
+import { motion } from "framer-motion";
 
-const ScrollToTopButton = () => {
-  const [visible, setVisible] = useState(false);
-  const { i18n } = useTranslation();
+export default function SuccessStories() {
+  const { t, i18n } = useTranslation();
   const isArabic = i18n.language === "ar";
 
-  useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.scrollY > window.innerHeight / 2) {
-        setVisible(true);
-      } else {
-        setVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+  // Animation Variants
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, ease: "easeOut" } },
   };
 
-  // حسب اللغة بنحدد الاتجاه
-  const positionClass = isArabic ? "right-5" : "left-5";
+  const fadeIn = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1.2 } },
+  };
 
   return (
-    <button
-      onClick={scrollToTop}
-      className={`fixed bottom-5 ${positionClass} z-50 p-3 rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 hover:bg-blue-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
-      }`}
-    >
-      <ArrowUp className="w-5 h-5" />
-    </button>
-  );
-};
+    <>
+      <Header
+        title={t("Successstories")}
+        role={t("Home")}
+        description={t("Atkwad")}
+      />
 
-export default ScrollToTopButton;
+      <TitleSection
+        title1={t("Successstories")}
+        title2={t("Unifying")}
+        discription={t("One")}
+      />
+
+      {/* === Section 1 === */}
+      <motion.div
+        dir={isArabic ? "rtl" : "ltr"}
+        className="flex flex-col gap-12 mt-20 items-center justify-center bg-[#f7f8fa] py-20 px-6"
+        variants={fadeIn}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* solition */}
+        <motion.div
+          className="flex flex-col items-start w-full max-w-6xl"
+          variants={fadeInUp}
+        >
+          <div className="flex px-5 items-start gap-4 mb-4">
+            <LineChart className="w-10 h-10 text-green-500" />
+            <h2 className="text-3xl font-light text-[#808080]">{t("The")}</h2>
+          </div>
+
+          <ul
+            className={`text-base font-light space-y-2 list-disc list-inside leading-relaxed text-[#808080] ${
+              isArabic ? "pr-8 text-right" : "pl-8 text-left"
+            }`}
+          >
+            <li>{t("Reanalyze")}</li>
+            <li>{t("Integratez")}</li>
+            <li>{t("Run")}</li>
+            <li>{t("Theproject")}</li>
+            <li>{t("Linking")}</li>
+          </ul>
+        </motion.div>
+
+        {/* النتيجة */}
+        <motion.div
+          className="flex flex-col items-start md:items-end w-full max-w-6xl"
+          variants={fadeInUp}
+        >
+          <div className="flex px-5 text-right md:w-90 lg:w-144 gap-4 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 text-green-500"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <h2 className="text-3xl font-light text-[#808080]">
+              {t("Result")}
+            </h2>
+          </div>
+
+          <ul
+            className={`text-base font-light md:w-[50%] space-y-2 list-disc list-inside leading-relaxed text-[#808080] ${
+              isArabic ? "pr-8 text-right" : "pl-8 text-left"
+            }`}
+          >
+            <li>{t("Theentity")}</li>
+            <li>{t("SuccessStory")}</li>
+          </ul>
+        </motion.div>
+         </motion.div>
+
+      {/* === Section 2 === */}
+          <motion.div
+            className="flex flex-col gap-8 py-20 w-[79%] m-auto"
+            variants={fadeInUp}
+            initial="hidden"
+            animate="visible"
+          >
+            <h2 className="text-4xl text-center font-medium text-[#808080]">
+              {t("Another")}
+            </h2>
+            <p className="text-[#808080] font-light">{t("Oneof")}</p>
+            <ul className="text-base font-light space-y-1 list-disc list-inside leading-relaxed text-[#808080]">
+              <li>{t("Difficulty")}</li>
+              <li>{t("Delay")}</li>
+              <li>{t("Poor")}</li>
+            </ul>
+          </motion.div>
+
+      {/* === Section 3 === */}
+          <motion.div
+            dir={isArabic ? "rtl" : "ltr"}
+            className="flex flex-col gap-12 items-center justify-center bg-[#f7f8fa] py-20 px-6"
+            variants={fadeIn}
+            initial="hidden"
+            animate="visible"
+          >
+            {/* الحل */}
+            <motion.div
+              className="flex flex-col items-start w-full max-w-6xl"
+              variants={fadeInUp}
+            >
+              <div className="flex px-5 items-start gap-4 mb-4">
+                <LineChart className="w-10 h-10 text-green-500" />
+                <h2 className="text-3xl font-light text-[#808080]">{t("The")}</h2>
+              </div>
+
+              <ul
+                className={`text-base font-light space-y-2 list-disc list-inside leading-relaxed text-[#808080] ${
+                  isArabic ? "pr-8 text-right" : "pl-8 text-left"
+                }`}
+              >
+                <li>{t("Rebuilding")}</li>
+                <li>{t("Design")}</li>
+                <li>{t("Leverage")}</li>
+              </ul>
+            </motion.div>
+
+            {/* النتيجة */}
+            <motion.div
+              className="flex flex-col items-start md:items-end w-full max-w-6xl"
+              variants={fadeInUp}
+            >
+              <div className="flex px-5 text-right md:w-90 lg:w-144 gap-4 mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-8 w-8 text-green-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+                <h2 className="text-3xl font-light text-[#808080]">
+                  {t("Result")}
+                </h2>
+              </div>
+
+              <ul
+                className={`text-base font-light md:w-[50%] space-y-2 list-disc list-inside leading-relaxed text-[#808080] ${
+                  isArabic ? "pr-8 text-right" : "pl-8 text-left"
+                }`}
+              >
+                <li>{t("Theclient")}</li>
+              </ul>
+            </motion.div>
+          </motion.div>
+    </>
+  );
+}
