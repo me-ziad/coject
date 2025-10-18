@@ -47,11 +47,12 @@ const Challenges = () => {
             <li>{t("Problemskeeprecurringandwastealotoftimefortheteam")}</li>
             <li>{t("Needalotoftimetokeepupwithotherpartiesdemands")}</li>
           </ul>
-          <button className="mt-8 btn text-white py-2 px-6 rounded transition">
-            <NavLink to={"problem"} onClick={handleNavClick}>
-              {t("Thesolutionishere")}
-            </NavLink>
-          </button>
+          <NavLink to="problem" onClick={handleNavClick}>
+        <button className="mt-8 btn text-white py-2 px-6 rounded transition">
+          {t("Thesolutionishere")}
+        </button>
+      </NavLink>
+
         </div>
       </div>
     </section>
