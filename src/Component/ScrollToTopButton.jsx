@@ -21,20 +21,23 @@ const ScrollToTopButton = () => {
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
-
-  // حسب اللغة بنحدد الاتجاه
-  const positionClass = isArabic ? "right-5" : "left-5";
 
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-5 ${positionClass} z-50 p-3 rounded-full bg-blue-600 text-white shadow-lg transition-all duration-300 hover:bg-blue-700 ${
-        visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
+
+      style={{
+        position: "fixed",
+        bottom: "1.25rem",  
+        [isArabic ? "right" : "left"]: "1.25rem",  
+        zIndex: 9999,
+      }}
+      className={`p-3 rounded-full bg-[#3190E7] cursor-pointer  text-white shadow-lg transition-all duration-300 hover:bg-[#20496f] ${
+        visible
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-10 pointer-events-none"
       }`}
     >
       <ArrowUp className="w-5 h-5" />

@@ -21,6 +21,7 @@ import SuccessStories from "./Component/SuccessStories/SuccessStories";
 import WhyAkwad from "./Component/WhyAkwad/WhyAkwad";
 import Contact from "./Component/Contact/Contact";
 import Broducts from "./Component/products/Products";
+import ScrollToTopButton from "./Component/ScrollToTopButton";
 
 function App() {
   
@@ -53,6 +54,8 @@ function App() {
   return (
     <>
          <RouterProvider router={routers}/>         
+          <ScrollToTopButton />
+
    
     </>
   )
