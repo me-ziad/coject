@@ -297,7 +297,7 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li className="flex-none text-right">
-            <NavLink
+            <NavLink onClick={handleNavClick}
               to={'WhyAkwad'}
               className="block hover:text-gray-700"
             >
@@ -305,7 +305,7 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li className="flex-none text-right">
-            <NavLink
+            <NavLink onClick={handleNavClick}
               to={'contact'}
               className="block hover:text-gray-700"
             >
@@ -378,15 +378,15 @@ export default function Navbar() {
                 </button>
                 {isHovered && (
                   <ul className="mt-2 space-y-1 pl-4 text-xs text-gray-600">
-                    <li><NavLink to={'/Softwaredevelpment'}   onClick={closeMobileMenu} className="block py-1 hover:text-gray-900"> {t('Softwaredevelopmentservices')}</NavLink></li>
-                    <li><NavLink  to={'Infrastructure'} onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('Infrastructurenetworkservices')} </NavLink></li>
-                    <li><NavLink to={'/Cybersecurity'} onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('Cybersecurity')}</NavLink></li>
-                    <li><NavLink to={'SystemsIntegration'}  onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('Systemsconsolidationservices')}</NavLink></li>
-                    <li><NavLink to={'TechnicalSupport'}   onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('Technicalsupportservices')} </NavLink></li>
-                    <li><NavLink to={'DatabaseServices'}  onClick={closeMobileMenu} className="block py-1 hover:text-gray-900"> {t('Databaseservices')}</NavLink></li>
-                    <li><NavLink  to={'TechnicalConsulting'}  onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('Technicalconsultingservices')}</NavLink></li>
-                    <li><NavLink  to={'CloudComputing'} onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('Cloudcomputingservices')}</NavLink></li>
-                    <li><NavLink  to={'DataAnalytics'} onClick={closeMobileMenu} className="block py-1 hover:text-gray-900"> {t('Analyticsanddataservices')}</NavLink></li>
+                    <li><NavLink to={'Softwaredevelpment'}   onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900"> {t('Softwaredevelopmentservices')}</NavLink></li>
+                    <li><NavLink  to={'Infrastructure'} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('Infrastructurenetworkservices')} </NavLink></li>
+                    <li><NavLink to={'Cybersecurity'} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('Cybersecurity')}</NavLink></li>
+                    <li><NavLink to={'SystemsIntegration'}  onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('Systemsconsolidationservices')}</NavLink></li>
+                    <li><NavLink to={'TechnicalSupport'}   onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('Technicalsupportservices')} </NavLink></li>
+                    <li><NavLink to={'DatabaseServices'}  onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900"> {t('Databaseservices')}</NavLink></li>
+                    <li><NavLink  to={'TechnicalConsulting'}  onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('Technicalconsultingservices')}</NavLink></li>
+                    <li><NavLink  to={'CloudComputing'} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('Cloudcomputingservices')}</NavLink></li>
+                    <li><NavLink  to={'DataAnalytics'} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900"> {t('Analyticsanddataservices')}</NavLink></li>
                   </ul>
                 )}
               </li>
@@ -402,20 +402,20 @@ export default function Navbar() {
                 </button>
                 {solutions && (
                   <ul className="mt-2 space-y-1 pl-4 text-xs text-gray-600">
-                    <li><NavLink to={'OperationAndMaintenance'}  onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('ITOperations')}</NavLink></li>
-                    <li><NavLink  to={'CustomSystems'}  onClick={closeMobileMenu} className="block py-1 hover:text-gray-900">{t('Custom')}</NavLink></li>
+                    <li><NavLink to={'OperationAndMaintenance'}  onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('ITOperations')}</NavLink></li>
+                    <li><NavLink  to={'CustomSystems'}  onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-1 hover:text-gray-900">{t('Custom')}</NavLink></li>
                   </ul>
                 )}
               </li>
 
               {/*all*/}
-              <li><NavLink to={"/research"} onClick={closeMobileMenu} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Researchanddevelopment')}</NavLink></li>
-              <li><NavLink to={"/products"} onClick={closeMobileMenu} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Products')}</NavLink></li>
-              <li><Link to ="https://coject.com/" onClick={closeMobileMenu} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Coject')}</Link></li>
-              <li><NavLink  to={'Employment'}  onClick={closeMobileMenu} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Employment')}</NavLink></li>
-              <li><NavLink to={'/SuccessStories'}  onClick={closeMobileMenu} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Successstories')}</NavLink></li>
-              <li><NavLink to={'WhyAkwad'} onClick={closeMobileMenu} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Whyakwad')}</NavLink></li>
-              <li><NavLink to={'contact'} onClick={closeMobileMenu} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Contactus')}</NavLink></li>
+              <li><NavLink to={"/research"} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Researchanddevelopment')}</NavLink></li>
+              <li><NavLink to={"/products"} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Products')}</NavLink></li>
+              <li><Link to ="https://coject.com/" onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Coject')}</Link></li>
+              <li><NavLink  to={'Employment'}  onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Employment')}</NavLink></li>
+              <li><NavLink to={'/SuccessStories'}  onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Successstories')}</NavLink></li>
+              <li><NavLink to={'WhyAkwad'} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Whyakwad')}</NavLink></li>
+              <li><NavLink to={'contact'} onClick={()=>{handleNavClick();closeMobileMenu()}} className="block py-2 text-right text-gray-700 hover:text-gray-900 border-b border-gray-200">{t('Contactus')}</NavLink></li>
 
               {/* اللغة - مع sub-menu collapsible */}
               <li className="border-b border-gray-200  pb-2">

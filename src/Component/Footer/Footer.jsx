@@ -38,14 +38,12 @@ export default function Footer() {
           </div>
           <div className="flex flex-col items-center justify-center gap-2 py-6 shadow-[-2px_0_8px_0_#2323232d]">
             <FaClock size={28} />
-            {i18n.language === "ar" ? (
-              <p>
-                {" "}
-                <p> م 06:00 - ص 08:00 </p>{" "}
-              </p>
+           { i18n.language === "ar" ? (
+              <p>م 06:00 - ص 08:00</p>
             ) : (
-              <p>08:00 AM - 06:00 PM </p>
+              <p>08:00 AM - 06:00 PM</p>
             )}
+
           </div>
         </div>
 
