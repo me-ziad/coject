@@ -1,0 +1,29 @@
+.logos-swiper {
+  width: 100%;
+  padding-bottom: 70px;
+}
+
+.logos-swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* النقط (pagination) */
+.swiper-pagination {
+  bottom: 0 !important;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #00c37a !important;
+  transform: scale(1.3);
+}

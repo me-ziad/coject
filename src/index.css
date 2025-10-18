@@ -1,1 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import "tailwindcss";
+
+
+body{
+    font-family: "Tajawal", sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #808080;
+    overflow-x: hidden;
+ }
+
+.NavBar{
+    color: #363B3F;
+     font-size: 0.77em;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+     font-weight: 500;
+      transition: all 2s ease-in-out;
+
+}
+ 
+.headerSection{
+  color: #808080;
+  font-size: 33px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  margin-top: 40;
+    font-family: sans-serif !important;
+
+}
+.backHero{
+  background-image: 
+    linear-gradient(rgba(0, 82, 169, 0.995), rgba(0, 82, 169, 0.567)),
+    url('../src/assets/images/1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.btn{
+  background-color: #3190E7;
+    border: 1px solid #3190E7;
+}
+.btn:hover{
+  background-color: transparent;
+  border: 1px solid #3190E7;
+  color: #3190E7;
+  transition: .4s all;
+  cursor: pointer;
+}
+.backSectionAboutAkwad-ar {
+  background-image: url('https://www.aait.com.sa/images/numbersbg.jpg');
+  background-position: left center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+.backSectionAboutAkwad-en {
+  background-image: url('https://www.aait.com.sa/images/numbersbg.jpg');
+  background-position: right center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+ 
