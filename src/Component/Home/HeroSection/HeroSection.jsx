@@ -98,7 +98,7 @@ export default function HeroSection() {
     <section
       ref={containerRef}
       onClick={handleMouseMove}
-      className="relative w-full h-[95vh] md:h-screen backHero text-white flex items-center justify-center overflow-hidden pt-[100px] select-none"
+      className="relative w-full h-[95vh] md:h-screen backHero  text-white flex items-center justify-center overflow-hidden pt-[100px] select-none"
       style={{
         cursor: "pointer",
       }}

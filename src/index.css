@@ -32,7 +32,7 @@ body{
 }
 .backHero{
   background-image: 
-    linear-gradient(rgba(0, 82, 169, 0.995), rgba(0, 82, 169, 0.567)),
+    linear-gradient(rgba(1, 94, 194, 0.808), rgba(0, 82, 169, 0.589)),
     url('../src/assets/images/1.jpg');
   background-size: cover;
   background-position: center;

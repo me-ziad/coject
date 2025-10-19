@@ -79,7 +79,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Navigation: stays visible on large screens, hidden on mobile */}
-        <ul className="hidden lg:flex justify-center items-center flex-nowrap w-full space-x-8 text-[13px] ">
+        <ul className="hidden lg:flex justify-center items-center flex-nowrap w-full space-x-8 text-[14px] ">
           {/* Logo */}
           <NavLink
             onClick={handleNavClick}
