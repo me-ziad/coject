@@ -61,7 +61,7 @@ const InterestSystems = () => {
             <SwiperSlide key={index}>
               {({ isActive }) => (
                 <div
-                  className={`flex relative flex-col items-center justify-center text-center transition-all duration-500 h-[180px] w-[370px] mx-auto ${
+                  className={`flex relative flex-col items-center justify-center text-center transition-all duration-500 h-[180px] w-[200px] md:w-[370px] mx-auto ${
                     isActive
                       ? "bg-white scale-110 shadow-2xl opacity-100 z-20"
                       : "bg-gray-50 scale-95 opacity-60 z-10"

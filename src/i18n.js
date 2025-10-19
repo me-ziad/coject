@@ -410,8 +410,7 @@ i18n
               Appointment:'نظام ادارة المواعيد',
               Medical:'نظام مراكز التأهيل الطبية',
               Task :'نظام ادارة المهام',
-              Home:'الرئيسية ',
-              fullName: 'الاسم الكامل',
+               fullName: 'الاسم الكامل',
               nationalId: 'رقم الهوية الوطنية / الإقامة',
               email: 'أدخل البريد الإلكتروني',
               phone: 'رقم الجوال',
@@ -488,7 +487,7 @@ i18n
               hereto:'نحن هنا لمساعدتك! نعمل معًا لإدارة الأسواق بفعالية من خلال شبكات مرنة وسهلة الاستخدام.',
               Askfo:'اطلب الدعم',
               supports:'نحن هنا لدعم عملائنا وتقديم حلول فعّالة مبنية على احتياجاتهم الحالية والتقنيات المتوفرة.',
-              Visitouroffices:'Visit our offices',
+              Visitouroffices:'قم بزيارة مكاتبنا',
               Qassim:'القصيم ,عنيزة ,المملكة العربية السعودية' ,
               "Send": "أرسل لنا",
               "usMessage": "رسالة",
@@ -504,8 +503,9 @@ i18n
               "valid_email": "من فضلك أدخل بريد إلكتروني صالح",
               "valid_phone": "رقم الجوال يجب أن يبدأ بـ 5 ويتكون من 9 أرقام",
               "valid_message": "من فضلك أدخل الرسالة",
-              "success_message": "تم إرسال رسالتك بنجاح  "
-                                      
+              "success_message": "تم إرسال رسالتك بنجاح  ",
+              Home:'الرئيسية'
+                                       
             }
                     },
                     en: {
@@ -607,8 +607,7 @@ i18n
                           maritalStatus: 'Please select marital status'
                         },
                         Human:'Human resources system',
-                        Home:'Home',
-                        Task :'Task management system',
+                         Task :'Task management system',
                         Medical:'Medical rehabilitation centers system',
                         Appointment:'Appointment management system',
                         Tendering:'Tendering System',
@@ -855,8 +854,7 @@ i18n
           Webapplicationdesignanddevelopment:'Web application design and development.',
           Technologylocalizationrate:'Technology localization rate',
           SystemsIntegration:'Systems Integration',
-          Contactus: 'Contact us',
-          Developcustomizedsolutionsondemand:'Develop customized solutions on demand.',
+           Developcustomizedsolutionsondemand:'Develop customized solutions on demand.',
           Servicedetails:'Service details',
           Mobileapplicationdesign:'Mobile application design.',
           discription:'Development ',

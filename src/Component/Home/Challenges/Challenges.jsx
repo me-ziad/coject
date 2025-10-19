@@ -28,14 +28,14 @@ const Challenges = () => {
           i18n.language === "ar" ? "left center" : "right center",}}>
       <div className="w-full">
         <div dir={dir} className="max-w-7xl mx-auto px-6 py-40">
-          <h2 className="text-4xl mb-7 font-[500] ">
+          <h2 className="text-2xl md:text-4xl mb-7 font-[500] ">
             {t("Areyoufacingthesechallenges")}
           </h2>
-          <p className="mb-6 text-3xl w-2/4 font-light">
+          <p className="mb-6  text-2xl md:text-3xl md:w-2/4 font-light">
             {t("Aquickoverviewofthemostimportantchallengesfacingcustomers")}
           </p>
           <ul
-            className={`list-disc list-inside ${textAlign} pr-5 space-y-2 leading-relaxed text-lg`}
+            className={`list-disc list-inside ${textAlign} pr-5 space-y-2 leading-relaxed text-sm`}
           >
             <li>{t("Areoutagesandmalfunctionshinderingyourwork")}</li>
             <li>{t("Technicalissuestakingtoolongtoresolve")}</li>
